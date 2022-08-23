@@ -1,7 +1,4 @@
-$(window).on('load', function (event) {
-    $('body').removeClass('preloading');
-    $('.load').delay(1000).fadeOut('fast');
-})
+
 
 $(document).ready(function () {
     $("#gototop").hide();
@@ -18,6 +15,15 @@ $(document).ready(function () {
             scrollTop: 0
         }, 1000)
     })
+
+/*LOAD*/
+window.addEventListener("load",function() {
+    var loader = document.querySelector(".loading")
+    this.setTimeout(function() {
+        loader.style="display:none;"
+    },1000)
+  })
+
 })
 
 
